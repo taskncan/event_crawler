@@ -1,0 +1,27 @@
+version: '3.4'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: event_crawler
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 331gfa
+    depends_on:
+      - postgres
+  postgres:
+    image: image
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_HOST: host.docker.internal
+      POSTGRES_USER: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: event_crawler
+      POSTGRES_PASSWORD: 331gfa
+
+  

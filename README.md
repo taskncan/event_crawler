@@ -16,7 +16,7 @@ docker build -t event_crawler .
 ```
 To run the Docker container, use the following command:
 ```
-docker run --name event_crawler -e POSTGRES_HOST=host.docker.internal -e POSTGRES_PORT=5432 -e POSTGRES_DB=event_crawler -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=331gfa event_crawler
+docker run --name event_crawler -e POSTGRES_HOST=host.docker.internal -e POSTGRES_PORT=5432 -e POSTGRES_DB=event_crawler -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=**** event_crawler
 ```
 Note: Replace the values for the environment variables POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DB, POSTGRES_USER, and POSTGRES_PASSWORD with the appropriate values for your PostgreSQL setup.
 
